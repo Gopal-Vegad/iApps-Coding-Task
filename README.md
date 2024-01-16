@@ -28,4 +28,4 @@ The application is implemented in Kotlin, following the MVVM architecture patter
 ### Data Source
 
 The application fetches data from the Flickr public photo feed API:
-[https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=cat&
+[https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=cat&nojsoncallback=1]
