@@ -21,13 +21,13 @@ data class FeedEntity(
     val media: String,
 
     @ColumnInfo(name = "date_taken")
-    val dateTaken: Date,
+    val dateTaken: Date?,
 
     @ColumnInfo(name = "description")
     val description: String,
 
     @ColumnInfo(name = "published")
-    val published: Date,
+    val published: Date?,
 
     @ColumnInfo(name = "author")
     val author: String,
