@@ -1,7 +1,8 @@
-package com.iapps.practical
+package com.iapps.practical.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.iapps.practical.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
