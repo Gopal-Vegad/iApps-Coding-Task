@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IApps-Practical</string>
+
+    <string name="no_internet_connection">No Internet Connect</string>
+</resources>
