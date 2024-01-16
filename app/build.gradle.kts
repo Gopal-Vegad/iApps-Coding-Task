@@ -6,6 +6,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -42,6 +43,7 @@ android {
     }
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -61,12 +63,13 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    implementation("androidx.activity:activity-ktx:1.8.2")
+
     // retrofit okhttp
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
-    implementation("com.google.code.gson:gson:2.10")
 
     // room
     implementation("androidx.room:room-runtime:2.6.1")
@@ -74,6 +77,16 @@ dependencies {
     ksp("androidx.room:room-compiler:2.6.1")
 
     //Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    ksp("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
+
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //jsoup
+    implementation("org.jsoup:jsoup:1.14.3")
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
